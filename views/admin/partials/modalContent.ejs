@@ -1,0 +1,32 @@
+<!-- views/admin/partials/modalContent.ejs -->
+
+
+<!-- Modal -->
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-header">
+  <h3 class="modal-title">{{product.name}}</h3>
+  </div>
+  <div class="modal-body">
+    <img ng-src="/images/macbook/thumb/{{product.pathImgThumb}}" alt="..." />
+
+      <ul class="list-group col-md-6" style="float: right; top: 50px;">
+        <li href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">Unit Price</h4>
+          <p class="list-group-item-text">{{product.price | currency }}</p>
+        </li>
+        <li href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">Summary</h4>
+          <p class="list-group-item-text">{{product.summary}}</p>
+        </li>
+        <li href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">Description</h4>
+          <p class="list-group-item-text">{{product.description}}</p>
+        </li>
+      </ul>
+  </div>
+  <div class="clearfix">...</div>
+  <div class="modal-footer" style="margin-top: 50px;">
+      <button class="btn btn-primary" type="button" ng-click="ok()">Modify</button>
+      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+  </div>
+</script>

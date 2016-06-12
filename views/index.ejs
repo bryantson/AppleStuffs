@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>All Apple Stuffs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/stylesheets/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="/stylesheets/ie9.css" /><![endif]-->
+	</head>
+	<body class="homepage" ng-app="AllAppleStuffsApp">
+		<!-- START of page-wrapper -->
+		<div id="page-wrapper">
+
+			<!-- START of header-wrapper -->
+				<div id="header-wrapper">
+					<!-- START of Header -->
+					<% include partials/header-div %>
+					<!-- END of Header -->
+
+					<!-- STAR of Hero -->
+						<% include partials/hero-section %>
+					<!-- END of Hero -->
+				</div>
+				<!-- END of header-wrapper -->
+
+			<!-- START of bodyContent1-div -->
+
+				<!-- END of bodyContent1-div -->
+
+			<!-- Promo -->
+				<!--
+				<div id="promo-wrapper">
+					<section id="promo">
+						<h2>Neque semper magna et lorem ipsum adipiscing</h2>
+						<a href="#" class="button">Breach the thresholds</a>
+					</section>
+				</div>
+			-->
+
+			<!-- Features 2 -->
+				<div class="wrapper">
+					<section class="container">
+						<ui-view></ui-view>
+					</section>
+				</div>
+
+			<!-- START of footer-wrapper -->
+			<% include partials/footer-div %>
+			<!-- END of footer-wrapper -->
+		</div>
+		<!-- END of page-wrapper -->
+
+		<!-- Scripts -->
+
+		<script type="text/ng-template" id="/home.html">
+			<header class="major">
+				<h2>Sed magna consequat lorem curabitur tempus</h2>
+				<p>Elit aliquam vulputate egestas euismod nunc semper vehicula lorem blandit</p>
+			</header>
+			<div class="row features">
+				<section class="4u 12u(narrower) feature">
+					<div class="image-wrapper first">
+						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+					vel sem sit dolor neque semper magna lorem ipsum.</p>
+				</section>
+				<section class="4u 12u(narrower) feature">
+					<div class="image-wrapper">
+						<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+					vel sem sit dolor neque semper magna lorem ipsum.</p>
+				</section>
+				<section class="4u 12u(narrower) feature">
+					<div class="image-wrapper">
+						<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+					vel sem sit dolor neque semper magna lorem ipsum.</p>
+				</section>
+			</div>
+			<ul class="actions major">
+				<li><a href="#" class="button">Elevate my awareness</a></li>
+			</ul>
+
+			<!-- Instagram Module -->
+			<div class="col-md-2" ng-repeat="pic in pics">
+				<img ng-src="{{pic.images.thumbnail.url}}" />
+			</div>
+
+		</script>
+
+		<script type="text/ng-template" id="/catalogPageMacbook.html">
+			<!-- Content -->
+			<article id="content">
+				<header>
+					<h2>Macbook Accessories</h2>
+					<p>{{summaryProductCatalog}}</p>
+				</header>
+
+				<div class="row">
+					<div class="col-xs-6 col-md-3" ng-repeat="product in listMacProducts">
+							<a href="#/product/{{$index}}" class="thumbnail">
+							<img ng-src="/images/macbook/thumb/{{product.pathImgThumb}}" alt="..." />
+						</a>
+						<div style="text-align: center;">{{product.name}}</div>
+						<div style="text-align: center;">&#36;{{product.price}}</div>
+					</div>
+				</div>
+			</article>
+
+		 <div class="col-md-2" ng-repeat="pic in pics">
+					<img ng-src="{{pic.images.thumbnail.url}}" />
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/ourStory.html">
+		<!-- Content -->
+			<article id="content">
+				<header>
+					<h2>Our Story</h2>
+					<p>Because we know Apple stands for something different</p>
+				</header>
+
+				<a href="#" class="image featured"><img src="images/coverOurStory.png" alt="" /></a>
+				<div class="col-md-12">
+						<center>
+							<h3>The Story Behind All Apple Stuffs</h3>
+							<hr width="10%"/>
+						</center>
+				</div>
+				<div class="col-md-6">
+					<p>
+						Every great venture has a humble beginning. From its birth, Apple has been synonymous with a product
+						that stands for more than a mere item. That was the vision of the former CEO and founder Steve Jobs,
+					 and that has been what Apple fans believe in.
+				 </p>
+			 </div>
+			 <div class="col-md-6">
+				 <p>
+					 But there was not one trust worthy place where Apple buyers can shop to find the quality Apple peripherals
+					and accessories that go great with their lovely Apple products. That was when our founder Bryant Son
+					noticed the need for a central venue to quickly find the quality accessories that Apple product owners deserve.
+					Encouraged by this idea, All Apple Stuffs was born.
+				</p>
+			</div>
+
+			<a href="#" class="image featured"><img src="images/coverOurStory2.png" alt="" /></a>
+			<div class="col-md-12">
+					<center>
+						<h3>What You Can Expect</h3>
+						<hr width="10%"/>
+					</center>
+			</div>
+			<div class="col-md-6">
+				<p>
+					Imagine a luxury boutique like Louis Vuitton or Gucci where you can expect the quality of item to be superior
+					and the service to be equally the same. Or, think about an Apple Store where you can find genuine Apple items.
+					All Apple Stuffs will thrive to become that place for you. Well, except the prices will be affordable.
+			 </p>
+		 </div>
+		 <div class="col-md-6">
+			 <p>
+				 Expect the superior product quality and service where you can expect everything to be awesome.
+				 But we also want our website to be a fun place to shop. We want All Apple Stuffs will become your number one place
+				 where you can happily shop for your Apple products. That is our mission.
+			</p>
+		</div>
+	 </article>
+		</script>
+
+			<script src="/javascripts/jquery.min.js"></script>
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="/javascripts/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+			<script src="/javascripts/angular.min.js"></script>
+			<script src="/javascripts/angular-ui-router.js"></script>
+			<script src="/javascripts/app.js"></script>
+			<script src="/javascripts/jquery.dropotron.min.js"></script>
+			<script src="/javascripts/skel.min.js"></script>
+			<script src="/javascripts/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/javascripts/main.js"></script>
+
+	</body>
+</html>

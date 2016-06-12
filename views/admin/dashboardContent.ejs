@@ -1,0 +1,67 @@
+<script type="text/ng-template" id="/dashboard.html">
+
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- START of loggedInView -->
+    <div id="idLoggedInView" ng-show="isLoggedIn()">
+      <!-- Top Horizontal Header -->
+      <% include partials/header %>
+
+      <!-- =============================================== -->
+
+      <!-- Left side column. contains the sidebar -->
+      <% include partials/leftSidebar %>
+
+      <!-- =============================================== -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Blank page
+            <small>it all starts here</small>
+          </h1>
+
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Examples</a></li>
+            <li class="active">Blank page</li>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <ui-view>
+            <% include partials/home %>
+          </ui-view>
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <!-- Footer -->
+      <% include partials/footer %>
+
+      <!-- Right Side Bar -->
+      <% include partials/rightSidebar %>
+
+      <!-- Add the sidebars background. This div must be placed  immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- END of loggedInView -->
+
+  </div><!-- ./wrapper -->
+
+  <!-- Angular UI Router Template -->
+
+  <!-- Modal Content for Dashboard -->
+  <% include partials/modalContent %>
+
+  <!-- Add Product View for Dashboard -->
+  <% include partials/addProduct %>
+
+  <!-- Add Product View for Dashboard -->
+  <% include partials/manageContent %>
+
+  <!-- Monitor Analytics for Dashboard -->
+  <% include partials/monitorAnalytics %>
+</script>

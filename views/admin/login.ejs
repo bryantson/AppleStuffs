@@ -1,0 +1,36 @@
+<script type="text/ng-template" id="/login.html">
+
+  <% include partials/loginNav %>
+  {{isLoggedIn()}}
+  <div ng-hide="isLoggedIn()" style="padding-left: 20px; padding-right: 20px;">
+    <div class="page-header">
+      <h3>Please proceed to login </h3>
+    </div>
+
+    <div ng-show="error" class="alert alert-danger row">
+      <span>{{ error.message }}</span>
+    </div>
+
+    <form ng-submit="logIn()" style="margin-top: 30px;">
+      <h3>User Name</h3>
+
+      <div class="form-group">
+        <input type="text"
+        class="form-control"
+        placeholder="Username"
+        ng-model="user.username">
+        </input>
+      </div>
+
+      <h3>Password</h3>
+      <div class="form-group">
+        <input type="password"
+        class="form-control"
+        placeholder="Password"
+        ng-model="user.password">
+        </input>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Log In</button>
+    </form>
+  </div>
+</script>

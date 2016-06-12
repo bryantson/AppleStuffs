@@ -1,0 +1,11 @@
+<!-- START OF Authentication Navigation -->
+<nav class="navbar navbar-default" ng-controller="NavCtrl" style="padding: 10px 10px 10px 10px;">
+  <ul class="nav navbar-nav">
+    <li style="color: #808080; font-size: 20px; padding: 5px 0px 0px 10px;">All Apple Stuffs Admin | </li>
+    <li style="color: #E55451; font-size: 20px; padding: 5px 0px 0px 20px;" ng-show="isLoggedIn()">Welcome, {{ currentUser() }}</li>
+    <li style="color: #E55451; font-size: 20px; padding-left: 40px;" ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+    <!--<li ng-hide="isLoggedIn()"><a href="/admin/#/register">Register</a></li> -->
+  </ul>
+</nav>
+<!-- END OF Authentication Navigation -->
+<h1> All Apple Stuffs Dashboard </h1>

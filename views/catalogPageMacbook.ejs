@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>All Apple Stuffs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
+
+		<link rel="stylesheet" href="/stylesheets/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar" ng-app="AllAppleStuffsApp">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+						<h1 id="logo"><a href="/">All Apple Stuffs</a></h1>
+
+						<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li>
+									<a href="./catalogPageMacbook">Macbook</a>
+									<!--
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li>
+											<a href="#">Phasellus consequat</a>
+											<ul>
+												<li><a href="#">Lorem ipsum dolor</a></li>
+												<li><a href="#">Phasellus consequat</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+									-->
+								</li>
+								<li><a href="./catalogPagePhone.html">iPhone</a></li>
+								<li class="break"><a href="right-sidebar.html">Journal</a></li>
+								<li><a href="no-sidebar.html">Our Story</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+
+			<!-- Main -->
+				<div class="wrapper">
+					<div class="container" id="main">
+						<ui-view></ui-view>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div id="footer" class="container">
+						<header class="major">
+							<h2>Euismod aliquam vehicula lorem</h2>
+							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit<br />
+							dolor neque semper magna lorem ipsum feugiat veroeros lorem ipsum dolore.</p>
+						</header>
+						<div class="row">
+							<section class="6u 12u(narrower)">
+								<form method="post" action="#">
+									<div class="row 50%">
+										<div class="6u 12u(mobile)">
+											<input name="name" placeholder="Name" type="text" />
+										</div>
+										<div class="6u 12u(mobile)">
+											<input name="email" placeholder="Email" type="text" />
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" /></li>
+												<li><input type="reset" value="Clear form" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+							<section class="6u 12u(narrower)">
+								<div class="row 0%">
+									<ul class="divided icons 6u 12u(mobile)">
+										<li class="icon fa-twitter"><a href="#"><span class="extra">twitter.com/</span>untitled</a></li>
+										<li class="icon fa-facebook"><a href="#"><span class="extra">facebook.com/</span>untitled</a></li>
+										<li class="icon fa-dribbble"><a href="#"><span class="extra">dribbble.com/</span>untitled</a></li>
+									</ul>
+									<ul class="divided icons 6u 12u(mobile)">
+										<li class="icon fa-instagram"><a href="#"><span class="extra">instagram.com/</span>untitled</a></li>
+										<li class="icon fa-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
+										<li class="icon fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
+									</ul>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		<script type="text/ng-template" id="/home.html">
+			<!-- Content -->
+			<article id="content">
+				<header>
+					<h2>Macbook Accessories</h2>
+					<p>{{summaryProductCatalog}}</p>
+				</header>
+
+				<div class="row">
+					<div class="col-xs-6 col-md-3" ng-repeat="product in listMacProducts">
+							<a href="#/product/{{$index}}" class="thumbnail">
+							<img ng-src="/images/macbook/thumb/{{product.pathImgThumb}}" alt="..." />
+						</a>
+						<div style="text-align: center;">{{product.name}}</div>
+						<div style="text-align: center;">&#36;{{product.price}}</div>
+					</div>
+				</div>
+			</article>
+
+     <div class="col-md-2" ng-repeat="pic in pics">
+					<img ng-src="{{pic.images.thumbnail.url}}" />
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/product.html">
+			<div class="row 150%">
+				<div class="8u 12u(narrower)">
+
+					<!-- Content -->
+						<article id="content">
+							<header>
+								<h2>{{chosenProduct.name}}</h2>
+								<p>{{chosenProduct.summary}}</p>
+							</header>
+							<a href="#" class="image featured">
+							<img src="/images/macbook/full/{{chosenProduct.pathImgFull}}" alt="" /></a>
+							<p>Ut sed tortor luctus, gravida nibh eget, volutpat odio. Proin rhoncus, sapien
+							mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
+							condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
+							ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
+							eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
+							turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
+							Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
+							<p>Mauris eleifend eleifend felis aliquet ornare. Vestibulum porta velit at elementum
+							gravida nibh eget, volutpat odio. Proin rhoncus, sapien
+							mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
+							condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
+							ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
+							eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
+							turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
+							Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
+							<p>Vestibulum pellentesque posuere lorem non aliquam. Mauris eleifend eleifend
+							felis aliquet ornare. Vestibulum porta velit at elementum elementum.</p>
+						</article>
+
+				</div>
+				<div class="4u 12u(narrower)">
+
+					<!-- Sidebar -->
+						<section id="sidebar">
+							<section>
+								<header>
+									<h3>Buy {{chosenProduct.name}}</h3>
+									<h5>&#36;{{chosenProduct.price}}</h5>
+								</header>
+								<p>{{chosenProduct.description}}</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Buy Through Amazon</a></li>
+								</ul>
+							</section>
+							<section>
+								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+								<header>
+									<h3>Commodo lorem varius</h3>
+								</header>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur et vel
+								sem sit amet dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et dolore
+								adipiscing elit. Curabitur vel sem sit.</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Ipsum sed dolor</a></li>
+								</ul>
+							</section>
+						</section>
+
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/addProduct.html">
+			<!-- Content -->
+			<form ng-submit="createProduct()">
+				<input type="text" ng-model="name" placeholder="Type Product Name"></input>
+				<input type="text" ng-model="summary" placeholder="Type Summary"></input>
+				<input type="text" ng-model="pathImgFull" placeholder="Type Path Img Full"></input>
+				<input type="text" ng-model="pathImgThumb" placeholder="Type Path Img Thumb"></input>
+				<input type="text" ng-model="price" placeholder="Type Product Price"></input>
+				<textarea ng-model="description" placeholder="Type Description"></textarea>
+				<button type="submit">Create New Product</button>
+			</form>
+		</script>
+
+		<script type="text/ng-template" id="/register.html">
+			<div class="page-header">
+				<h1>Flapper News</h1>
+			</div>
+
+			<div ng-show="error" class="alert alert-danger row">
+				<span>{{ error.message }}</span>
+			</div>
+
+			<form ng-submit="register()" style="margin-top: 30px;">
+				<h3>Register</h3>
+
+				<div class="form-group">
+					<input type="text"
+					class="form-control"
+					placeholder="Username"
+					ng-model="user.username">
+					</input>
+				</div>
+
+				<div class="form-group">
+					<input type="password"
+					class="form-control"
+					placeholder="Password"
+					ng-model="user.password">
+					</input>
+				</div>
+				<button type="submit" class="btn btn-primary">Register</button>
+			</form>
+		</script>
+
+		<script type="text/ng-template" id="/login.html">
+			<div class="page-header">
+				<h1>Flapper News</h1>
+			</div>
+
+			<div ng-show="error" class="alert alert-danger row">
+				<span>{{ error.message }}</span>
+			</div>
+
+			<form ng-submit="logIn()" style="margin-top: 30px;">
+				<h3>Log In</h3>
+
+				<div class="form-group">
+					<input type="text"
+					class="form-control"
+					placeholder="Username"
+					ng-model="user.username">
+					</input>
+				</div>
+
+				<div class="form-group">
+					<input type="password"
+					class="form-control"
+					placeholder="Password"
+					ng-model="user.password">
+					</input>
+				</div>
+				<button type="submit" class="btn btn-primary">Log In</button>
+			</form>
+	</script>
+
+		<!-- Scripts -->
+
+			<script src="/javascripts/jquery.min.js"></script>
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="/javascripts/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+			<script src="/javascripts/angular.min.js"></script>
+			<script src="/javascripts/angular-ui-router.js"></script>
+			<script src="/javascripts/app.js"></script>
+			<script src="/javascripts/jquery.dropotron.min.js"></script>
+			<script src="/javascripts/skel.min.js"></script>
+			<script src="/javascripts/util.js"></script>
+			<!--[if lte IE 8]><script src="/javascripts/ie/respond.min.js"></script><![endif]-->
+			<script src="/javascripts/main.js"></script>
+
+
+
+	</body>
+</html>
