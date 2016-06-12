@@ -86,7 +86,7 @@ app.factory("instagram", ["$http", function($http) {
   return {
     fetchPopular: function(callback) {
       var endPoint = "https://api.instagram.com/v1/users/self/media/recent/?access_token=220836038.c0da5df.bb5f0363e3204e3a985ec13297014dec&callback=JSON_CALLBACK&count=6";
-  console.log(endPoint);
+      //console.log(endPoint);
 
       $http.jsonp(endPoint).success(function(response) {
         callback(response.data);
